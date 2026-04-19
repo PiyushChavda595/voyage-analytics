@@ -1,0 +1,52 @@
+name: Voyage Analytics CI/CD
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    # ------------------------
+    # Backend Check
+    # ------------------------
+    - name: Install backend dependencies
+      run: |
+        cd backend
+        pip install -r requirements.txt
+
+    - name: Check FastAPI app
+      run: |
+        cd backend
+        python -c "import main"
+
+    # ------------------------
+    # Frontend Check
+    # ------------------------
+    - name: Install frontend dependencies
+      run: |
+        cd frontend
+        pip install -r requirements.txt
+
+    - name: Check Streamlit app
+      run: |
+        cd frontend
+        python -c "import app"
+
+    # ------------------------
+    # Docker Build Test
+    # ------------------------
+    - name: Build Docker images
+      run: docker-compose build
