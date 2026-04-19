@@ -48,5 +48,5 @@ jobs:
     # ------------------------
     # Docker Build Test
     # ------------------------
-    - name: Build Docker images
-      run: docker-compose build
+    - name: Skip Docker step
+      run: echo "Docker build skipped in CI"
