@@ -12,7 +12,7 @@ st.caption("AI-powered Travel Recommendation & Prediction System 🚀")
 # =========================
 # API BASE URL
 # =========================
-API_URL = "http://backend:8000"  # change to localhost if needed
+API_URL = "https://voyage-backend.onrender.com" 
 
 # =========================
 # TABS
