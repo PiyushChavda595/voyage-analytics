@@ -3,7 +3,11 @@ __pycache__/
 *.pyc
 
 # Models (DO NOT upload)
-*.pkl
+features.pkl
+final_mlflow_model.pkl
+
+
+mlflow.db
 
 # MLflow
 mlruns/
