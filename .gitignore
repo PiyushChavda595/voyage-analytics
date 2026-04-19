@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Models (DO NOT upload)
+*.pkl
+
+# MLflow
+mlruns/
+mlflow/
+
+# Environment files
+.env
