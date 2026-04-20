@@ -12,7 +12,7 @@ st.caption("AI-powered Travel Recommendation & Prediction System 🚀")
 # =========================
 # API BASE URL
 # =========================
-API_URL = "https://voyage-backend.onrender.com" 
+API_URL = "https://voyage-backend-09jx.onrender.com" 
 
 # =========================
 # TABS
